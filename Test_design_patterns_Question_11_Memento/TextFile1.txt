@@ -1,0 +1,13 @@
+﻿                LabelField fieldUP = null;
+                if (field.MatrixIndex.Y + 1 >= 0 && field.MatrixIndex.Y + 1 < _matrix.GetLength(1)) fieldUP = _matrix[field.MatrixIndex.X, field.MatrixIndex.Y + 1];
+                LabelField fieldDowN = null;
+                if (field.MatrixIndex.Y - 1 >= 0 && field.MatrixIndex.Y - 1 < _matrix.GetLength(1)) fieldDowN = _matrix[field.MatrixIndex.X, field.MatrixIndex.Y - 1];
+                LabelField fieldLefT = null;
+                if (field.MatrixIndex.X - 1 >= 0 && field.MatrixIndex.X - 1 < _matrix.GetLength(0)) fieldLefT = _matrix[field.MatrixIndex.X - 1, field.MatrixIndex.Y];
+                LabelField fieldRighT = null;
+                if (field.MatrixIndex.X + 1 >= 0 && field.MatrixIndex.X + 1 < _matrix.GetLength(0)) fieldRighT = _matrix[field.MatrixIndex.X + 1, field.MatrixIndex.Y];
+
+                field.UP = fieldUP;
+                field.DowN = fieldDowN;
+                field.LefT = fieldLefT;
+                field.RighT = fieldRighT;
